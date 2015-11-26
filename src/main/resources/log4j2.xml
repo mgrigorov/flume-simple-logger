@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="App" packages="">
+    <Appenders>
+        <Flume name="EventLogger" compress="false" type="Avro">
+            <Agent host="localhost" port="8800"/>
+            <RFC5424Layout enterpriseNumber="18060" includeMDC="true" appName="App"/>
+        </Flume>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="EventLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
