@@ -3,7 +3,6 @@
     <Appenders>
         <Flume name="EventLogger" compress="false" type="Avro">
             <Agent host="localhost" port="8800"/>
-            <RFC5424Layout enterpriseNumber="18060" includeMDC="true" appName="App"/>
         </Flume>
     </Appenders>
     <Loggers>
